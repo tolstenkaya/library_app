@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { getAllBooks } from "./LIbraryService";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export const App = () =>{
+  const [books, setBooks]=useState([]);
+  useEffect(()=>{
+    getAllBooks().then(setBooks)
+  },[]);
+
+  return(
+    <div>
+      <h3>Books</h3>
+      {
+        books.map(book=>(
+          <div key={book.id}>
+            <p>Title: {book.title}</p>
+            <p>Author: {book.author}</p>
+            <p>Publishing house: {book.publishing_house}</p>
+            <p>Publishing date: {book.publishing_date}</p>
+          </div>
+        ))
+      }
     </div>
-  );
-}
-
-export default App;
+  )
+};
