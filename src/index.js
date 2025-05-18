@@ -1,6 +1,12 @@
 import React from "react";
 import * as ReactDomClient from "react-dom/client";
-import { App } from "./App";
+import { BrowserRouter } from "react-router-dom";
 
+import { App } from "./App";
+import "./index.css"
 const app = ReactDomClient.createRoot(document.getElementById("app"));
-app.render(<App/>);
+app.render(
+<BrowserRouter>
+<App/>
+</BrowserRouter>
+);

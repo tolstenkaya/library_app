@@ -1,0 +1,31 @@
+.books_list{
+    display: flex;
+    flex-direction: row;
+}
+
+.book_element{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.book_image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:150px;
+    height:200px;
+    background-image: center;
+    object-fit: contain;
+}
+
+.title_app{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#add_new_book{
+    position: absolute;
+    right:10px;
+    top:10px;
+}
