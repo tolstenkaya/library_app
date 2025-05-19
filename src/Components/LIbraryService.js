@@ -7,3 +7,12 @@ export async function getAllBooks(){
     });
     return response.json();
 }
+
+export async function addNewBook(new_book){
+    const response = await fetch(API,{
+        method:"POST",
+        headers:{"Accept":"application/json", "Content-Type":"application/json"},
+        body: JSON.stringify(new_book)
+    });
+    return response.json();
+}
