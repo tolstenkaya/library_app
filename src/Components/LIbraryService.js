@@ -16,3 +16,14 @@ export async function addNewBook(new_book){
     });
     return response.json();
 }
+
+export async function deleteBook(id){
+    console.log(id);
+    
+    const response =  await fetch(`${API}/${id}`,{
+        method:"DELETE",
+        headers:{"Accept":"application/json"}
+    });
+
+    return response.json();
+}
