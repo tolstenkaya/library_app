@@ -18,12 +18,19 @@ export async function addNewBook(new_book){
 }
 
 export async function deleteBook(id){
-    console.log(id);
-    
     const response =  await fetch(`${API}/${id}`,{
         method:"DELETE",
         headers:{"Accept":"application/json"}
     });
 
+    return response.json();
+}
+
+export async function updateBook(update_book){
+    const response = await fetch(`${API}/${update_book.id}`,{
+        method:"PUT",
+        headers:{"Accept":"application/json", "Content-Type":"application/json"},
+        body:JSON.stringify(update_book)
+    });
     return response.json();
 }
