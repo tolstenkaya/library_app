@@ -38,7 +38,7 @@ export const LibraryPage = () =>{
     const saveChangeDataBook = ()=>{
       updateBook(editedBook)
       .then(setBooks(prevBooks => prevBooks.map(book=>book.id===editedBook.id ? editedBook : book)))
-      .then( setEditingModeBookId(null), setEditedBook({}))
+      .then(setEditingModeBookId(null), setEditedBook({}))
     };
 
     const cancelEdit = () =>{
@@ -55,27 +55,27 @@ export const LibraryPage = () =>{
         books.map(book=>(
           <div key={book.id} className="book_element">
             {
-              (editingModeBookId === book.id) ? <>
-              <label>
+              (editingModeBookId === book.id) ? <div className="change_book_form">
+              <label className="label_field_add_form">
                 Image: <input  type="text" name="image" value={editedBook.image} onChange={(e)=>onChangeBookValue(e)}/>
               </label>
-              <label>
+              <label className="label_field_add_form">
                 Title: <input  type="text" name="title" value={editedBook.title} onChange={(e)=>onChangeBookValue(e)}/>
               </label>
-              <label>
+              <label className="label_field_add_form">
                 Author: <input  type="text" name="author" value={editedBook.author} onChange={(e)=>onChangeBookValue(e)}/>
               </label>
-              <label>
+              <label className="label_field_add_form">
                 Publishing house: <input  type="text" name="publishing_house" value={editedBook.publishing_house} onChange={(e)=>onChangeBookValue(e)}/>
               </label>
-              <label>
+              <label className="label_field_add_form">
                 Publishing date: <input  type="date" name="publishing_date" value={editedBook.publishing_date} onChange={(e)=>onChangeBookValue(e)}/>
               </label>
               <div className="delete_edit_panel">
-                <button onClick={()=>saveChangeDataBook()}>Save</button>
-                <button onClick={()=>cancelEdit()}>Cancel</button>
+                <button className="action_button save_btn" onClick={()=>saveChangeDataBook()}>Save</button>
+                <button className="action_button cancel_btn" onClick={()=>cancelEdit()}>Cancel</button>
               </div>           
-              </> : <>
+              </div> : <>
               <img className="book_image" src={book.image}/>
               <p>Title: {book.title}</p>
               <p>Author: {book.author}</p>
