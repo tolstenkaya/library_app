@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 .books_list{
     display: flex;
     flex-direction: row;
@@ -127,3 +132,70 @@
 .cancel_btn{
     background-color: firebrick;
 }
+
+.main_page{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+}
+
+.control_panel{
+    width: 10%;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.panel_part{
+    margin-bottom: 50px;
+}
+
+
+
+.title{
+    font-size: 0.6cm;
+}
+
+.image_text_block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.panel_icon{
+    width: 30px;
+    height: 30px;
+}
+
+.grey_square{
+    width: 20px;
+    height: 20px;
+    background-color: rgba(130, 130, 130, 0.3);
+    border-radius: 3px;
+    padding: 3px;
+    margin-right: 5px;
+}
+
+.option_icon{
+    object-fit: contain;
+    width: 20px;
+    height: 20px;
+}
+
+.main_icon{
+    background-image: url('./images/icons/icon_home_main_black.svg');
+    background-size: cover;
+}
+
+   
+
+.chapter:hover{
+   .main_icon{
+    background-image: url('./images/icons/icon_home_main_white.svg');
+   } 
+   .grey_square{
+    background-color: #339AF0;
+   }
+    font-weight: bold;
+};

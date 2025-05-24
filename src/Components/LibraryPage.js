@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { getAllBooks, deleteBook,updateBook} from "./LIbraryService";
 import image_delete from "../images/icons/delete_icon.svg";
 import image_edit from "../images/icons/edit_icon.svg";
+import image_home from "../images/icons/icons8-home.svg";
+import image_main from "../images/icons/icon_home_main.svg";
 
 export const LibraryPage = () =>{
     const[books, setBooks] = useState([]);
@@ -47,9 +49,47 @@ export const LibraryPage = () =>{
     }
 
     return(
-    <div>
-      <button id="add_new_book" onClick={()=>navigate("/add-book")}>Add new book</button>
-      <h3 className="title_app">Library</h3>
+    <div className="main_page">
+      {/* <button id="add_new_book" onClick={()=>navigate("/add-book")}>Add new book</button> */}
+      <div className="control_panel">
+        <div className="panel_part title image_text_block">
+          <img className="panel_icon" src={image_home}/>
+          <b>Book</b>Base</div>
+        <div className="panel_part">
+          <div className="chapter image_text_block">
+            <div  className="grey_square">
+              <div className="option_icon main_icon"></div>
+            </div>
+            Discover
+          </div>
+          <div className="chapter image_text_block">
+            Category
+          </div>
+          <div className="chapter image_text_block">
+            My Library
+          </div>
+          <div className="chapter image_text_block">
+            Download
+          </div>
+          <div className="chapter image_text_block">
+            Audio Books
+          </div>
+          <div className="chapter image_text_block">
+            Favourite
+          </div>             
+        </div>
+        <div className="panel_part">
+          <div className="chapter image_text_block">
+            Settings
+          </div>
+          <div className="chapter image_text_block">
+            Support
+          </div>
+          <div className="chapter image_text_block">
+            Logout
+          </div> 
+        </div>
+      </div>
       <div className="books_list">
       {
         books.map(book=>(
