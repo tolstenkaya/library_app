@@ -13,6 +13,8 @@
     margin: 10px;
     padding: 10px;
     width: 210px;
+    display: block;
+    height: 47%;
 }
 
 .book_image{
@@ -161,6 +163,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    /* margin: 5px 0px; */
 }
 
 .panel_icon{
@@ -188,12 +191,78 @@
     background-size: cover;
 }
 
-   
+.list_icon{
+    background-image: url('./images/icons/file-list-3-line_black.svg');
+    background-size: cover;
+}
+
+.library_icon{
+    background-image: url('./images/icons/book-open-line_black.svg');
+    background-size: cover;
+}
+
+.download_icon{
+    background-image: url('./images/icons/file-download-line_black.svg');
+    background-size: cover;
+}
+
+.audio_icon{
+    background-image: url('./images/icons/speak-line_black.svg');
+    background-size: cover;
+}
+
+.favourite_icon{
+    background-image: url('./images/icons/heart-line_black.svg');
+    background-size: cover;
+}
+
+.setting_icon{
+    background-image: url('./images/icons/settings-2-line_black.svg');
+    background-size: cover;
+}
+
+.support_icon{
+    background-image: url('./images/icons/wechat-line_black.svg');
+    background-size: cover;
+}
+
+.logout_icon{
+    background-image: url('./images/icons/wechat-line_black.svg');
+    background-size: cover;
+}
+
+.chapter{
+    margin: 20px 0px;
+}   
 
 .chapter:hover{
    .main_icon{
     background-image: url('./images/icons/icon_home_main_white.svg');
    } 
+   .list_icon{
+    background-image: url('./images/icons/file-list-3-line_white.svg');
+   }
+   .library_icon{
+    background-image: url('./images/icons/book-open-line_white.svg');
+   }
+   .download_icon{
+    background-image: url('./images/icons/file-download-line_white.svg');
+   }
+   .audio_icon{
+    background-image: url('./images/icons/speak-line_white.svg');
+   }
+   .favourite_icon{
+    background-image: url('./images/icons/heart-line_white.svg');
+   }
+   .setting_icon{
+    background-image: url('./images/icons/settings-2-line_white.svg');
+   }
+   .support_icon{
+    background-image: url('./images/icons/wechat-line_white.svg');
+   }
+   .logout_icon{
+    background-image: url('./images/icons/wechat-line_white.svg');
+   }
    .grey_square{
     background-color: #339AF0;
    }

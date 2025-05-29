@@ -63,29 +63,53 @@ export const LibraryPage = () =>{
             Discover
           </div>
           <div className="chapter image_text_block">
+            <div  className="grey_square">
+              <div className="option_icon list_icon"></div>
+            </div>
             Category
           </div>
           <div className="chapter image_text_block">
+            <div  className="grey_square">
+              <div className="option_icon library_icon"></div>
+            </div>
             My Library
           </div>
           <div className="chapter image_text_block">
+            <div  className="grey_square">
+              <div className="option_icon download_icon"></div>
+            </div>
             Download
           </div>
           <div className="chapter image_text_block">
+            <div  className="grey_square">
+              <div className="option_icon audio_icon"></div>
+            </div>
             Audio Books
           </div>
           <div className="chapter image_text_block">
+            <div  className="grey_square">
+              <div className="option_icon favourite_icon"></div>
+            </div>
             Favourite
           </div>             
         </div>
         <div className="panel_part">
           <div className="chapter image_text_block">
+            <div  className="grey_square">
+              <div className="option_icon setting_icon"></div>
+            </div>
             Settings
           </div>
           <div className="chapter image_text_block">
+            <div  className="grey_square">
+              <div className="option_icon support_icon"></div>
+            </div>
             Support
           </div>
           <div className="chapter image_text_block">
+            <div  className="grey_square">
+              <div className="option_icon logout_icon"></div>
+            </div>
             Logout
           </div> 
         </div>
