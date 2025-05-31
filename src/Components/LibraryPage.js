@@ -5,6 +5,8 @@ import image_delete from "../images/icons/delete_icon.svg";
 import image_edit from "../images/icons/edit_icon.svg";
 import image_home from "../images/icons/icons8-home.svg";
 import image_main from "../images/icons/icon_home_main.svg";
+import user_photo from "../images/test_user/user_photo.jpg";
+import arrow_img from "../images/icons/arrow-down-s-line.svg";
 
 export const LibraryPage = () =>{
     const[books, setBooks] = useState([]);
@@ -52,7 +54,7 @@ export const LibraryPage = () =>{
     <div className="main_page">
       {/* <button id="add_new_book" onClick={()=>navigate("/add-book")}>Add new book</button> */}
       <div className="control_panel">
-        <div className="panel_part title image_text_block">
+        <div className="title image_text_block">
           <img className="panel_icon" src={image_home}/>
           <b>Book</b>Base</div>
         <div className="panel_part">
@@ -93,6 +95,7 @@ export const LibraryPage = () =>{
             Favourite
           </div>             
         </div>
+        <hr id="line_divide_blockes"/>
         <div className="panel_part">
           <div className="chapter image_text_block">
             <div  className="grey_square">
@@ -114,9 +117,22 @@ export const LibraryPage = () =>{
           </div> 
         </div>
       </div>
-      <div className="books_list">
-      {
-        books.map(book=>(
+      <div className="main_panel">
+        <div className="search_panel">
+          <input id="search_input" placeholder="Search your favourite books"/>
+          <div className="info_panel">
+            <div id="notification_bell_img" className="info_panel_part"></div>
+            <div className="user_info info_panel_part">
+              <img className="user_info_part" src={user_photo} id="user_profile_photo_img"/>
+              <div className="user_info_part">Olenka</div>
+              <img className="arrow_image" src={arrow_img}/>
+            </div>
+            
+          </div>
+        </div>
+        <div className="books_list">
+          {
+          books.map(book=>(
           <div key={book.id} className="book_element">
             {
               (editingModeBookId === book.id) ? <div className="change_book_form">
@@ -143,7 +159,7 @@ export const LibraryPage = () =>{
               <img className="book_image" src={book.image}/>
               <p>Title: {book.title}</p>
               <p>Author: {book.author}</p>
-              <p>Publishing house: {book.publishing_house}</p>
+              <p className="book_line">Publishing house: {book.publishing_house}</p>
               <p>Publishing date: {book.publishing_date}</p>
               <div class="delete_edit_panel">
                 <img id="delete_icon" src={image_delete} onClick={()=>removeBook(book.id)}/>
@@ -157,6 +173,8 @@ export const LibraryPage = () =>{
         ))
       }
       </div>
+      </div>
+      
     </div>
   )
 }
