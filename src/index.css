@@ -5,18 +5,20 @@
 
 .books_list{
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-.book_element{
+/* .book_element{
     background-color:white;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
     width: 210px;
     display: block;
-    height: 47%;
-}
+    height: 50vh;
+} */
 
 .book_image{
     display: block;
@@ -26,14 +28,15 @@
     width:150px;
     height:200px;
     background-image: center;
-    border-radius: 10%;
     object-fit: contain;
 }
 
 .book_line{
-    white-space: nowrap;
+    max-width: 180px;
+    white-space:nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    display: inline-block;
 }
 
 .title_app{
@@ -284,6 +287,9 @@
 .main_panel{
     background-color: rgb(219, 227, 246);
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .search_panel{
@@ -294,11 +300,10 @@
     display:flex;
     align-items: center;
     padding: 0px 30px;
-    padding-top: 5px;
 }
 
 #search_input{
-    height: 40px;
+    height: 35px;
     width: 40%;
     border: 0px;
     border-radius: 5px;
@@ -355,3 +360,88 @@
     height:25px;
 }
 
+.books_part{
+    width: 65%;
+    height: 45vh;
+    margin: 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+}
+
+.recommended{
+    margin-bottom: 0px;
+}
+
+.all_categories{
+
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+}
+
+.see_all_btn{
+    position: absolute;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding:3px 7px;
+    width: auto;
+    height: 25px;
+    background-color: #E8F0FC;
+    border-radius: 5px;
+}
+
+#blue_arrow_see_all_btn{
+    width: 25px;
+    height: 25px;
+}
+
+#blue_folder_all_categories_btn{
+    width: 20px;
+    height: 20px;
+}
+
+.book_element{
+    position: relative;
+    background-color: grey;
+    height: 280px;
+    width: 180px;
+    margin: 5px;
+    padding: 5px;
+    display: block;
+    border-radius: 7px;
+}
+
+#book11{
+    background-color: rgb(128, 172, 140);
+}
+
+#book12{
+    background-color: rgb(250, 217, 4);
+}
+
+#book13{
+    background-color: rgb(202, 201, 201);
+}
+
+#book14{
+    background-color: rgb(113, 86, 29);
+}
+
+.book_discribe{
+    background-color: white;
+    padding: 5px;
+    position: absolute;
+    width: 180px;
+    left:0px;
+    bottom: 0px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border:1px solid black;
+}

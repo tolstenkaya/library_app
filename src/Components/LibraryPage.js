@@ -7,6 +7,8 @@ import image_home from "../images/icons/icons8-home.svg";
 import image_main from "../images/icons/icon_home_main.svg";
 import user_photo from "../images/test_user/user_photo.jpg";
 import arrow_img from "../images/icons/arrow-down-s-line.svg";
+import blue_arrow from "../images/icons/arrow-drop-right-blue_line.svg";
+import blue_folder from "../images/icons/folder-download-blue-line.svg";
 
 export const LibraryPage = () =>{
     const[books, setBooks] = useState([]);
@@ -130,7 +132,54 @@ export const LibraryPage = () =>{
             
           </div>
         </div>
-        <div className="books_list">
+
+         <div className="recommended books_part">
+          <div className="header">
+            <b>Recommended</b>
+            <div className="see_all_btn">
+              <span style={{color:"blue"}}>See all</span>
+              <img src={blue_arrow} id="blue_arrow_see_all_btn"/>
+            </div>
+          </div>
+
+          <div className="recommended_books">
+            <div className="books_list">
+              {
+                books.map(book=>{
+                  if(book.id>10){
+                    return(
+                      <div className="book_element" id={`book${book.id}`}>
+                        <img src={book.image} className="book_image"/>
+                          <div className="book_discribe">
+                            <span className="book_line"><b>{book.title}</b></span>
+                            <br/>
+                            <span className="book_line">{book.author}</span>
+                          </div>
+                      </div>
+                    )
+                  }
+                })
+              }
+            </div>
+          </div>
+
+        </div>
+
+          <div className="all_categories books_part">
+            <div className="header">
+              <b>Categories</b>
+              <div className="see_all_btn">
+                <img src={blue_folder} id="blue_folder_all_categories_btn"/>
+              </div>
+              
+            </div>
+
+            <div className="books_list">
+
+            </div>
+          </div>
+
+        {/* <div className="books_list">
           {
           books.map(book=>(
           <div key={book.id} className="book_element">
@@ -172,7 +221,7 @@ export const LibraryPage = () =>{
           </div>
         ))
       }
-      </div>
+      </div> */}
       </div>
       
     </div>
