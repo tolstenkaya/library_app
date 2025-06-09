@@ -146,7 +146,7 @@ export const LibraryPage = () =>{
             <div className="books_list">
               {
                 books.map(book=>{
-                  if(book.id>10){
+                  if(book.id>10 && book.id<15){
                     return(
                       <div className="book_element" id={`book${book.id}`}>
                         <img src={book.image} className="book_image"/>
@@ -171,11 +171,35 @@ export const LibraryPage = () =>{
               <div className="see_all_btn">
                 <img src={blue_folder} id="blue_folder_all_categories_btn"/>
               </div>
-              
             </div>
 
-            <div className="books_list">
+            <div className="list_categories">
+                <button className="btn_category">All</button>
+                <button className="btn_category">Sci-Fi</button>
+                <button className="btn_category">Fantasy</button>
+                <button className="btn_category">Drama</button>
+                <button className="btn_category">Adventure</button>
+                <button className="btn_category">Business</button>
+                <button className="btn_category">Education</button>
+                <button className="btn_category">Geography</button>
+              </div>
 
+            <div className="small_books_list">
+              {
+                books.slice(0,11).map(book=>{
+                  if(book.id>14 || book.id<11)
+                  return(
+                    <div className="small_book_element" id={`book${book.id}`}>
+                        <img src={book.image} className="small_book_image"/>
+                          <div className="small_book_discribe">
+                            <span className="small_book_line"><b>{book.title}</b></span>
+                            <br/>
+                            <span className="small_book_line">{book.author}</span>
+                          </div>
+                    </div>
+                  )
+                })
+              }
             </div>
           </div>
 
