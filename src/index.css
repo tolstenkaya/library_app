@@ -25,14 +25,14 @@
     margin-left: auto;
     margin-right: auto;
     margin: 15px auto;
-    width:130px;
-    height:180px;
+    width:120px;
+    height:170px;
     background-image: center;
     object-fit: contain;
 }
 
 .book_line{
-    max-width: 150px;
+    max-width: 135px;
     font-size: 0.8em;
     white-space:nowrap;
     overflow: hidden;
@@ -159,6 +159,7 @@
 .control_panel{
     width: 10%;
     padding: 10px;
+    margin: 10px;
 }
 
 .panel_part{
@@ -301,6 +302,7 @@
     display:flex;
     align-items: center;
     padding: 0px 30px;
+    z-index: 10;
 }
 
 #search_input{
@@ -362,9 +364,9 @@
 }
 
 .books_part{
-    width: 60%;
+    width: 68%;
     height: 45vh;
-    margin: 15px;
+    margin: 18px;
     padding: 20px;
     background-color: white;
     border-radius: 5px;
@@ -375,9 +377,9 @@
     margin-bottom: 0px;
 }
 
-.all_categories{
+/* .all_categories{
 
-}
+} */
 
 .header{
     display: flex;
@@ -411,10 +413,10 @@
 .book_element{
     position: relative;
     background-color: grey;
-    height: 250px;
-    width: 150px;
-    margin: 5px;
-    padding: 5px;
+    height: auto;
+    width: 145px;
+    /* margin: 5px;
+    padding: 7px 5px; */
     display: block;
     border-radius: 7px;
 }
@@ -438,11 +440,10 @@
 .book_discribe{
     background-color: white;
     padding: 5px;
-    position: absolute;
-    width: 150px;
+    position: relative;
+    width: auto;
     left:0px;
     bottom: 0px;
-    margin-top: 15;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
     border:1px solid black;
@@ -483,9 +484,9 @@
 }
 
 .small_book_image{
-    width: 95px;
+    width: 90px;
     height: 115px;
-    object-fit: cover;
+    object-fit:cover;
     border-radius: 5px;
 }
 
@@ -500,4 +501,37 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: inline-block;
+}
+
+.choosen_part_book{
+    position: absolute;
+    background-color:rgb(16, 19, 102);
+    height: 70vh;
+    width: 21%;
+    right: 0;
+    z-index: 1;
+    padding: 7% 1%;
+}
+
+.choosen_book{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.choosen_book_line{
+    margin: 15px;
+}
+
+.choosen_book_title{
+    padding-bottom: 15px;
+}
+
+.choosen_book_author{
+    margin-top: 10px; /* або більше, залежно від дизайну */
+    display: inline-block; /* потрібно для margin-top у span */
 }

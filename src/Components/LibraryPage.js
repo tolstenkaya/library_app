@@ -119,6 +119,7 @@ export const LibraryPage = () =>{
           </div> 
         </div>
       </div>
+
       <div className="main_panel">
         <div className="search_panel">
           <input id="search_input" placeholder="Search your favourite books"/>
@@ -146,7 +147,7 @@ export const LibraryPage = () =>{
             <div className="books_list">
               {
                 books.map(book=>{
-                  if(book.id>10 && book.id<15){
+                  if(book.id>8 && book.id<15){
                     return(
                       <div className="book_element" id={`book${book.id}`}>
                         <img src={book.image} className="book_image"/>
@@ -247,6 +248,30 @@ export const LibraryPage = () =>{
       }
       </div> */}
       </div>
+
+  {
+    books[6] &&(
+    <div className="choosen_part_book">
+      <div className="choosen_book">
+        <div className="book_element" id={`book${books[6].id}`}>
+          <img src={books[6].image} className="book_image" alt={books[6].title} />
+        </div>
+
+        <div className="choosen_book_line">
+            <span className="choosen_book_title">{books[6].title}</span>
+              <br/>
+            <span className="choosen_book_author">{books[6].author}</span>
+        </div>
+
+        <div>
+        </div>
+        
+      </div>
+    </div>
+    )
+  }
+  
+
       
     </div>
   )
