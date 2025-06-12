@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { getAllBooks, deleteBook,updateBook} from "./LIbraryService";
+
 import image_delete from "../images/icons/delete_icon.svg";
 import image_edit from "../images/icons/edit_icon.svg";
 import image_home from "../images/icons/icons8-home.svg";
@@ -9,6 +10,7 @@ import user_photo from "../images/test_user/user_photo.jpg";
 import arrow_img from "../images/icons/arrow-down-s-line.svg";
 import blue_arrow from "../images/icons/arrow-drop-right-blue_line.svg";
 import blue_folder from "../images/icons/folder-download-blue-line.svg";
+import { StarComponent } from "./StarComponent";
 
 export const LibraryPage = () =>{
     const[books, setBooks] = useState([]);
@@ -263,6 +265,7 @@ export const LibraryPage = () =>{
             <span className="choosen_book_author">{books[6].author}</span>
         </div>
 
+        <StarComponent rating={4.8} maxRating={5}/>
         <div>
         </div>
         
